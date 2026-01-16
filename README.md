@@ -40,11 +40,13 @@ bash
 
 # 2. Run training (one time)
 python train_propulsion_model.py
-# Creates propulsion_model.pkl (50MB)
+
+Creates propulsion_model.pkl (50MB)
 
 # 3. Start backend server
 python backend.py
-# Runs on http://localhost:8000
+
+Runs on http://localhost:8000
 
 # 4. Test API
 curl -X POST http://localhost:8000/predict \
@@ -52,4 +54,5 @@ curl -X POST http://localhost:8000/predict \
   -d '{"motor_kv": 2850, "esc_limit_a": 30, "battery_voltage": 11.1, "prop_diameter_in": 6, "prop_pitch_in": 4}'
 
 # 5. Update your HTML frontend with new JavaScript
-# (See web_deployment_guide.md for exact code)
+
+(See web_deployment_guide.md for exact code)
